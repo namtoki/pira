@@ -1,0 +1,23 @@
+name: pira
+description: "ピラティス フォーム判定アプリ（座禅ポーズ判定プロトタイプ）"
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.14.0
+
+dependencies:
+  camera: ^0.12.2
+  flutter:
+    sdk: flutter
+  google_mlkit_commons: ^1.0.3
+  google_mlkit_pose_detection: ^1.0.3
+  material_ui: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

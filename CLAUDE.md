@@ -10,10 +10,10 @@
 
 ## 方針
 
-- **まずはWebアプリ**で作る。アプリストア審査不要、GitHub Pages（HTTPS）で公開すればスマホのブラウザからカメラが使える。
-- 技術スタック: Vite + TypeScript + MediaPipe Pose Landmarker（`@mediapipe/tasks-vision`）
-- 処理はすべて端末内（ブラウザ）で完結させ、映像はサーバーに送らない。
-- 音声フィードバックは Web Speech API（`speechSynthesis`、`lang: "ja-JP"`）。
+- **Flutter アプリ**で作る（まず Android、将来 iOS にも対応）。最初は Web アプリ（Vite + MediaPipe）で試作したが、アプリにする方針に変更した（Web 版は git 履歴に残っている）。
+- 技術スタック: Flutter + `camera` + Google ML Kit Pose Detection（`google_mlkit_pose_detection`、MediaPipe と同じ 33 点）
+- 処理はすべて端末内で完結させ、映像はサーバーに送らない。
+- 音声フィードバックは端末の読み上げ（例: `flutter_tts`、日本語）を使う予定。
 - UIの文言・音声はすべて日本語。
 
 ## 判定の仕組み
@@ -54,7 +54,7 @@
 ## 今後やりたいこと（優先度順の目安）
 
 1. MVP（上の2ポーズ）をスマホで動かして角度を調整
-2. GitHub Pages で公開
+2. ストア公開の準備（Android → iOS）
 3. ポーズを追加（テーブルトップ、サイドプランク、スワンなど）
 4. 動きのあるポーズ（ロールアップなど）の判定
 5. 記録・履歴機能
